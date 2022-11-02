@@ -1,0 +1,265 @@
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 60px;
+}
+
+.camera-logo {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+  border-right: 1.5px solid black;
+}
+.camera-logo-2 {
+  width: 30px;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/camera.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: left;
+}
+
+@font-face {
+  font-family: 'lobster';
+  src: url('../../../assets/yeonwoonam/main/font/Lobster-Regular.ttf');
+}
+
+.westagram-logo {
+  margin-left: 8px;
+  font-family: lobster, sans-serif;
+  font-size: 20px;
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #dddddd;
+}
+
+.magnifying-glass {
+  height: 20px;
+  margin-left: 20px;
+  opacity: 0.5;
+}
+.search-bar {
+  width: 250px;
+  height: 38px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/Magnifying\ Glass.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position-x: 20px;
+  background-position-y: 10px;
+  &:focus {
+    background-image: none;
+  }
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+.compass-icon {
+  width: 250px;
+  height: 38px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/compass.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.like-icon {
+  width: 250px;
+  height: 38px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/heart-unfilled.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.profile-icon {
+  width: 250px;
+  height: 38px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/user.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.main-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 50px;
+
+  background-color: beige;
+}
+
+.feeds-wrap {
+  width: 470px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+.article-top {
+  width: inherit;
+  height: 58px;
+}
+.side-wrap {
+  width: 319px;
+  height: 542px;
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #cde9ff;
+}
+
+a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.article-menu-left {
+  display: flex;
+}
+
+.aritlce-top {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  border-radius: 8px;
+  background-color: #ddffbb;
+}
+
+.personal-logo {
+  padding: 8px 8px;
+}
+
+.article-more {
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.more-button {
+  border: none;
+  opacity: 0.8;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border: 0.2px;
+  border-radius: 50%;
+}
+
+.location-id-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 3px;
+  opacity: 0.8;
+  font-weight: 620;
+}
+a {
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.feed-image {
+  width: 470px;
+  height: 587.5px;
+  border-radius: 1px;
+}
+
+.article-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.bottom-left-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 40px;
+  padding: 10px 10px;
+}
+.bottom-right-wrap {
+  align-items: center;
+  height: 40px;
+  padding: 10px 10px;
+}
+.give-like {
+  width: 24px;
+  height: 24px;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/heart-filled.png');
+  background-size: cover;
+}
+
+.leave-comment {
+  width: 24px;
+  height: 24px;
+}
+
+.share-content {
+  width: 24px;
+  height: 24px;
+}
+.save-content {
+  width: 22px;
+  height: 22px;
+  border-style: none;
+  background-color: transparent;
+  background-image: url('../../../assets/yeonwoonam/main/bookmark-filled.png');
+  background-size: cover;
+}
+
+.active-save {
+  background-image: url('../../../assets/yeonwoonam/main/bookmark-unfilled.png');
+}
+
+.active-like {
+  background-image: url('../../../assets/yeonwoonam/main/heart-unfilled.png');
+}
