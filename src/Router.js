@@ -3,12 +3,12 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './pages/Main/Main';
+
 import Cheon from './pages/Cheon/CheonLogin';
 import Hong from './pages/Hong/HongLogin';
 import Kim from './pages/Kim/KimLogin';
-import Oh from './pages/Oh/Oh-login';
-import Nam from './pages/Nam/Nam-login';
+import Oh from './pages/Oh/OhLogin';
+import Nam from './pages/Nam/NamLogin';
 import Nav from './components/Nav/Nav';
 
 function Router() {
