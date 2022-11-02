@@ -1,8 +1,10 @@
-import './Main.scss';
+import './NamMain.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import profile from '/images/yeonwoonam/profile.jpg';
+// import feedpic from './feed-picture.jpg';
 
-function Main() {
+function NamMain() {
   return (
     <div>
       <meta charSet="UTF-8" />
@@ -11,7 +13,6 @@ function Main() {
       <link rel="stylesheet" href="style.css" />
       <title>Westagram</title>
       <nav className="nav-wrap">
-        {/*상단 메뉴바*/}
         <div className="nav-left">
           <div className="camera-logo">
             <button class="camera-logo-2" type="text" />
@@ -28,21 +29,26 @@ function Main() {
           <button class="profile-icon" />
         </div>
       </nav>
-      {/*상단 메뉴바 끝*/}
       {/*여기서부터 메인*/}
       <div className="main-wrap">
         <div className="feeds-wrap">
           <div className="aritlce-top">
             <header className="article-menu-left">
               <div className="personal-logo">
-                <img src="/images/profile.jpg" className="profile-pic" />
+                <img
+                  src="/images/yeonwoonam/profile.jpg"
+                  alt='"profile"'
+                  className="profile-pic"
+                />
               </div>
               <div className="location-id-wrap">
                 <div className="personal-id">
-                  <a href="#">wecode39_alice</a>
+                  <a href="https://www.instagram.com/makingshit/">
+                    wecode39_alice
+                  </a>
                 </div>
                 <div className="img-location">
-                  <a href="#">Seolleung, Gangnam </a>
+                  <a href="https://naver.me/G8tW4kl4">Seolleung, Gangnam </a>
                 </div>
               </div>
             </header>
@@ -52,32 +58,18 @@ function Main() {
           </div>
           <div className="article-middle">
             <img
-              src="./pictures/developer-weekend.jpg"
+              src="/images/yeonwoonam/feed-picture.jpg"
               alt="like-icon"
               className="feed-image"
             />
           </div>
           <div className="article-bottom">
             <div className="bottom-left-wrap">
-              {/*버튼으로 수정*/}
               <button type="button" className="active-like give-like" />
-              <div className="article-comment">
-                <img
-                  src="./icons/comment.png"
-                  alt="comment icon"
-                  className="leave-comment"
-                />
-              </div>
-              <div className="artilce-share">
-                <img
-                  src="./icons/message.png"
-                  alt="share icone"
-                  className="share-content"
-                />
-              </div>
+              <button type="button" className="leave-comment" />
+              <button type="button" className="share-content" />
             </div>
             <div className="bottom-right-wrap">
-              {/*버튼 참고*/}
               <button type="button" className="active-save save-content" />
             </div>
           </div>
@@ -92,4 +84,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default NamMain;

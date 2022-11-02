@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'lobster';
+  src: url('../../../assets/yeonwoonam/main/font/Lobster-Regular.ttf');
+}
+
+.logo-container {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.westa-logo {
+  width: 350px;
+  margin: 30px auto;
+  font-family: 'lobster', sans-serif;
+  font-size: 50px;
+  -webkit-user-select: none;
+}
+
+.wrapper {
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+
+.bar-wrapper {
+  margin: 5px;
+}
+
+.login-container {
+  width: 300px;
+  margin: 40px auto;
+}
+
+.id-bar {
+  height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.password-bar {
+  height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+input {
+  width: 280px;
+  height: 28px;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  border: none;
+  outline: 0;
+  font-size: 13px;
+}
+
+input::placeholder {
+  color: #dbdbdb;
+}
+
+button {
+  width: 290px;
+  height: 30px;
+  border: solid transparent;
+  border-radius: 3px;
+  background-color: #0095f6;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #b2dffc;
+}
+
+.password-wrap {
+  margin: 100px;
+  text-align: center;
+}
+
+.password {
+  color: #055377;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
