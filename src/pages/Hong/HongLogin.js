@@ -1,7 +1,7 @@
 import React from 'react';
 
 function HongLogin() {
-  return <h1>Hello Hong</h1>;
+  return <h1>어렵구만</h1>;
 }
 
 export default HongLogin;
