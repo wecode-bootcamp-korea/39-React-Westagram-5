@@ -4,23 +4,24 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Cheon from './pages/Cheon/CheonLogin';
-import Hong from './pages/Hong/HongLogin';
-import Kim from './pages/Kim/KimLogin';
-import Oh from './pages/Oh/OhLogin';
-import Nam from './pages/Nam/NamLogin';
+import CheonLogin from './pages/Cheon/CheonLogin';
+
 import Nav from './components/Nav/Nav';
+import HongLogin from './pages/Hong/HongLogin';
+import KimLogin from './pages/Kim/KimLogin';
+import OhLogin from './pages/Oh/OhLogin';
+import NamLogin from './pages/Nam/NamLogin';
 
 function Router() {
   return (
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/cheon" element={<Cheon />} />
-        <Route path="/hong" element={<Hong />} />
-        <Route path="/kim" element={<Kim />} />
-        <Route path="/oh" element={<Oh />} />
-        <Route path="/nam" element={<Nam />} />
+        <Route path="/cheon" element={<CheonLogin />} />
+        <Route path="/hong" element={<HongLogin />} />
+        <Route path="/kim" element={<KimLogin />} />
+        <Route path="/oh" element={<OhLogin />} />
+        <Route path="/nam" element={<NamLogin />} />
       </Routes>
     </BrowserRouter>
   );
