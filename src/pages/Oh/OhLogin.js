@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Oh() {
+function OhLogin() {
   return <h1>Hello Oh</h1>;
 }
 
-export default Oh;
+export default OhLogin;

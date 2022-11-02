@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Hong() {
+function HongLogin() {
   return <h1>Hello Hong</h1>;
 }
 
-export default Hong;
+export default HongLogin;

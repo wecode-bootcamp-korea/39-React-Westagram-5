@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Nam() {
+function NamLogin() {
   return <h1>Hello Nam</h1>;
 }
 
-export default Nam;
+export default NamLogin;

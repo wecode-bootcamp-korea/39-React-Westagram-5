@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Kim() {
+function KimLogin() {
   return <h1>Hello Kim</h1>;
 }
 
-export default Kim;
+export default KimLogin;

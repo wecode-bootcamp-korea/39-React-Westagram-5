@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Cheon() {
+function CheonLogin() {
   return <h1>Hello Cheon</h1>;
 }
 
-export default Cheon;
+export default CheonLogin;

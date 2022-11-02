@@ -4,9 +4,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main/Main';
-import Cheon from './pages/Cheon/Cheon-login';
-import Hong from './pages/Hong/Hong-login';
-import Kim from './pages/Kim/Kim-login';
+import Cheon from './pages/Cheon/CheonLogin';
+import Hong from './pages/Hong/HongLogin';
+import Kim from './pages/Kim/KimLogin';
 import Oh from './pages/Oh/Oh-login';
 import Nam from './pages/Nam/Nam-login';
 import Nav from './components/Nav/Nav';
