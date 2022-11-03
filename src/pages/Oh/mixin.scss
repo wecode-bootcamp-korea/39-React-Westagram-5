@@ -1,0 +1,15 @@
+@mixin flex-direction($flex-direction, $justify) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin border($px, $color) {
+  border: $px solid $color;
+}

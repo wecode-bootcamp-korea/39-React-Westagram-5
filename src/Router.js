@@ -1,6 +1,3 @@
-// 라우터 컴포넌트를 만들고 엑스포트 할것임
-//대체로 이러한 모양
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -9,18 +6,19 @@ import CheonLogin from './pages/Cheon/CheonLogin';
 import Nav from './components/Nav/Nav';
 import HongLogin from './pages/Hong/HongLogin';
 import KimLogin from './pages/Kim/KimLogin';
-import OhLogin from './pages/Oh/OhLogin';
+import OhLogin from './pages/Oh/Login/OhLogin';
+import OhMain from './pages/Oh/Main/OhMain';
 import NamLogin from './pages/Nam/NamLogin';
 
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/cheon" element={<CheonLogin />} />
         <Route path="/hong" element={<HongLogin />} />
         <Route path="/kim" element={<KimLogin />} />
-        <Route path="/oh" element={<OhLogin />} />
+        <Route path="/ohLogin" element={<OhLogin />} />
+        <Route path="/ohMain" element={<OhMain />} />
         <Route path="/nam" element={<NamLogin />} />
       </Routes>
     </BrowserRouter>

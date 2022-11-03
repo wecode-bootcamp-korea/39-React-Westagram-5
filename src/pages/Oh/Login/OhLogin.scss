@@ -1,0 +1,84 @@
+@import '../mixin';
+
+.outline-box {
+  width: 697px;
+  height: 757px;
+  /* position: absolute; */
+  margin: 24px auto;
+  border: 1px solid #f2f2f2;
+  background-color: #fff;
+  text-align: center;
+
+  .instagram-logo {
+    margin: 83px auto 68px auto;
+    font-family: 'Lobster', cursive;
+    font-size: 78px;
+  }
+
+  .loging-form {
+    @include flex-direction(column, center);
+
+    .btnBox {
+      .loginBtn:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .id,
+  .password,
+  .btnBox,
+  .findPw {
+    @include flex-direction(column, center);
+    align-items: center;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  .id,
+  .password {
+    width: 530px;
+    height: 70px;
+    margin: 15px auto;
+    border: 0.5px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #fafafa;
+    color: #a2a2a2;
+
+    &:focus {
+      outline: 1px solid #adadad;
+    }
+  }
+
+  input::placeholder {
+    color: #a2a2a2;
+    text-indent: 12px;
+  }
+
+  .loginBtn,
+  .loginBtnOn {
+    width: 540px;
+    height: 55px;
+    margin: 30px auto 180px auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .loginBtn {
+    background-color: rgb(196, 225, 251);
+  }
+
+  .findPw {
+    color: #4d7095;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.loginBtnOn {
+  background-color: rgb(0, 149, 246);
+}
