@@ -4,7 +4,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import CheonLogin from './pages/Cheon/CheonLogin';
+import CheonLogin from './pages/Cheon/Login/CheonLogin';
+import CheonMain from './pages/Cheon/Main/CheonMain';
 
 import Nav from './components/Nav/Nav';
 import HongLogin from './pages/Hong/HongLogin';
