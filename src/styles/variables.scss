@@ -3,13 +3,3 @@
 // $base-color: #999;
 // 를 변수화해서 여러 scss 파일에서 활용하고 싶은데 이것을 한 군데 즉 variables.scss에서 관리하게 된다면 좀 더 효율적으로 관리 할 수 있음.
 
-@mixin flex($display, $justify, $align) {
-    display: $display;
-    justify-content: $justify;
-    align-items: $align;
-  }
-  
-  @mixin widhigh($width, $height) {
-    width: $width;
-    height: $height;
-  }

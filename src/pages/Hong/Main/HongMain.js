@@ -1,9 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HongMain.scss';
 import Nav from '../../../components/Nav/Nav';
-import '../../../styles/variables.scss';
+import '../../../styles/mixin.scss';
 
 function HongMain() {
+  const [input, inputValue] = useState('');
+  const [inputBox, setInputBox] = useState([]);
+
+  const saveInputValue = e => {
+    inputValue(e.target.value);
+  };
+
+  const commentBox = () => {
+    let inputArr = [...inputBox];
+    inputArr.push(input);
+    setInputBox(inputArr);
+    inputValue('');
+    console.log(1);
+  };
+
+  const enter = e => {
+    if (e.code === 'Enter') {
+      commentBox();
+    }
+  };
+  /*
+  function generateUserName() {
+    let alphabet =
+      'aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ1234567890~!@#$^&-_';
+    let randomname = '';
+    for (let i = 0; i < 13; i++) {
+      let index = Math.floor(Math.random(10) * alphabet.length);
+      randomname += alphabet[index];
+    }
+    return randomname;
+  }
+*/
+  const commentPush = (re, com) => {
+    return (
+      <div key={com} className="replyBox">
+        <span>{/*generateUserName*/}내이름</span>
+        {re}
+      </div>
+    );
+  };
+
+  const replyPush = inputBox.map(commentPush);
   return (
     <>
       <Nav />
@@ -20,7 +62,7 @@ function HongMain() {
             <p>westagram</p>
           </div>
           <div className="searcharea">
-            <img alt="nugget" src="./images/hongseokhyun/magnifyingglass.png" />
+            <img alt="nugget" src="images/hongseokhyun/magnifying-glass.png" />
             <input type="text" placeholder="검색" className="search" />
           </div>
           <div className="nav_right">
@@ -52,14 +94,14 @@ function HongMain() {
                 <div className="accountname">jindodog_nuu_get</div>
                 <img
                   alt="nugget"
-                  src="../../asstes/hongseokhyun/menudots.png"
+                  src="images/hongseokhyun/menudots.png"
                   className="menudots"
                 />
               </div>
               <div className="feedpic">
                 <img
                   alt="nuggetpic"
-                  src="../src/asstes/hongseokhyun/nuggetbirth.jpg"
+                  src="images/hongseokhyun/nuggetbirth.jpg"
                 />
                 <img alt="nuggetpic" src="images/hongseokhyun/nuggetface.jpg" />
               </div>
@@ -95,10 +137,17 @@ function HongMain() {
                   <div id="comment-count">
                     댓글 <span id="count">0</span>개
                   </div>
-                  <div id="comments"></div>
+                  <div id="comments">{replyPush}</div>
                   <div className="fix">
-                    <input id="comment-input" placeholder="댓글 달기.." />
-                    <button id="submit">게시</button>
+                    <input
+                      id="comment-input"
+                      placeholder="댓글 달기.."
+                      onChange={saveInputValue}
+                      onKeyUp={enter}
+                    />
+                    <button id="submit" onClick={commentBox}>
+                      게시
+                    </button>
                   </div>
                 </div>
               </div>

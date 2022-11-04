@@ -165,12 +165,13 @@
               @include flex(flex, space-between, normal);
               width: 469px;
               height: 45px;
-              border-top: 1px solid;
+              border-top: 1px solid #dbdbdb;
 
               #comment-input {
                 width: 100%;
                 height: 45px;
                 border: none;
+                margin-top: 0;
               }
 
               #submit {
