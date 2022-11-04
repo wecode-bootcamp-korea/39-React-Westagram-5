@@ -1,9 +1,12 @@
 import React from 'react';
 import './HongMain.scss';
+import Nav from '../../../components/Nav/Nav';
+import '../../../styles/variables.scss';
 
 function HongMain() {
   return (
     <>
+      <Nav />
       <header>
         <div className="nav">
           <div className="nav_left">
@@ -49,14 +52,14 @@ function HongMain() {
                 <div className="accountname">jindodog_nuu_get</div>
                 <img
                   alt="nugget"
-                  src="images/hongseokhyun/menudots.png"
+                  src="../../asstes/hongseokhyun/menudots.png"
                   className="menudots"
                 />
               </div>
               <div className="feedpic">
                 <img
                   alt="nuggetpic"
-                  src="images/hongseokhyun/nuggetbirth.jpg"
+                  src="../src/asstes/hongseokhyun/nuggetbirth.jpg"
                 />
                 <img alt="nuggetpic" src="images/hongseokhyun/nuggetface.jpg" />
               </div>
