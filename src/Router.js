@@ -18,7 +18,8 @@ function Router() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/cheon" element={<CheonLogin />} />
+        <Route path="/cheon-login" element={<CheonLogin />} />
+        <Route path="/cheon-main" element={<CheonMain />} />
         <Route path="/hong" element={<HongLogin />} />
         <Route path="/kim" element={<KimLogin />} />
         <Route path="/oh" element={<OhLogin />} />
