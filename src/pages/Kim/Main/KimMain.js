@@ -1,46 +1,43 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import './KimMain.scss';
+import CommentList from './CommentList';
 
 const KimMain = () => {
-  function onClickImg() {
-    Navigate(`./KimMain`);
-  }
-
-  function repl() {
-    const uploadButton = document.querySelector('.upload_button');
-    const comment = document.querySelector('.write_newComment');
-    //const newCommentDiv = document.createElement("div");
-    function addComment() {
-      const commentWrapper = document.querySelector('.comment_wrapper');
-      const newCommentDiv = document.createElement('div');
-      newCommentDiv.className = 'previous_comment';
-      newCommentDiv.innerHTML = `<p><b>kunwoooo</b> ${comment.value} </p><img class="comment_likebutton" alt="" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">`;
-      commentWrapper.appendChild(newCommentDiv);
-      // comment_likebutton.addEventListener('click', function () {
-      //     // 하트 아이콘을 클릭했을시 이벤트 추가.
-
-      // })
+  const navi = useNavigate();
+  const click = e => {
+    navi('./');
+  };
+  const [comment, setComment] = useState('');
+  const handleCommentInput = event => {
+    setComment(event.target.value);
+  };
+  const [commentArray, setCommentArray] = useState([]);
+  const onSubmit = event => {
+    event.preventDefault();
+    if (comment === '') {
+      return;
     }
-    uploadButton.addEventListener('click', function () {
-      addComment();
-      comment.value = '';
-    });
-    comment.addEventListener('keydown', function (e) {
-      if (e.keyCode === 'Enter') {
-        //엔터키 동작을 위한 코드
-        addComment();
-        comment.value = '';
+    setCommentArray([...commentArray, comment]);
+    setComment('');
+  };
+  const pressEnter = event => {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      if (comment === '') {
+        return;
       }
-    });
-  }
-
+      setCommentArray([...commentArray, comment]);
+      setComment('');
+    }
+  };
   return (
     <>
       <div className="main_all">
         <div className="nav">
           <div className="logoMain">
             <img
+              onClick={click}
               src="/images/kimkunwoo/insta.png"
               className="insta"
               alt="westa"
@@ -99,7 +96,7 @@ const KimMain = () => {
                   <b>wecode</b>님 외 10명이 좋아합니다
                 </a>
               </div>
-              <div className="comment">
+              <div className="comment_name">
                 <p className="pclassName">
                   <b>kunwoooo</b> 레오
                 </p>
@@ -117,20 +114,27 @@ const KimMain = () => {
                 </div>
               </div>
             </div>
+            <ul>
+              {commentArray.map((comment, index) => (
+                <CommentList key={index} comment={comment} />
+              ))}
+            </ul>
             <div className="time">
               <a className="small">42분 전</a>
             </div>
             <div className="new_comment">
               <input
-                onKeyPress={repl}
+                onChange={handleCommentInput}
+                value={comment}
+                onKeyPress={pressEnter}
                 id="name"
                 className="write_newComment"
                 type="text"
                 placeholder="댓글 달기..."
               />
               <button
-                onKeyPress={repl}
-                // onClick={repl}
+                type="button"
+                onClick={onSubmit}
                 className="upload_button"
                 id="submit"
               >
@@ -221,7 +225,11 @@ const KimMain = () => {
                 </div>
               </div>
               <div className="rmain">
-                <img src="/images/kimkunwoo/wecode.png" className="wecode" />
+                <img
+                  src="/images/kimkunwoo/wecode.png"
+                  alt="wecode"
+                  className="wecode"
+                />
                 <div className="right_2_text">
                   <a>
                     <b>wecode_bootcamp</b>
