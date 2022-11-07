@@ -57,14 +57,7 @@
 
   .loginBtn,
   .loginBtnOn {
-    width: 540px;
-    height: 55px;
-    margin: 30px auto 180px auto;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 26px;
-    font-weight: 600;
+    @include btnDefalut;
   }
 
   .loginBtn {
