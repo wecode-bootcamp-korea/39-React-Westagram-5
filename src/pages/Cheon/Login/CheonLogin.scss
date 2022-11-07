@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -28,7 +29,7 @@ body {
 .text-file {
   width: 85%;
   margin: 50px;
-  margin-top: 15%;
+  margin-top: 6%;
   margin-bottom: -80px;
   padding: 22px;
   border: 1px;
@@ -38,12 +39,13 @@ body {
   background-color: #fafafa;
   color: gray;
   font-size: 25px;
+  text-align: left;
 }
 .push-btn {
   width: 85%;
   margin: 50px;
   margin-top: 147px;
-  margin-bottom: 148px;
+  margin-bottom: 155px;
   padding: 15px;
   border: solid 1px;
   border-radius: 5px;
@@ -63,7 +65,7 @@ form input {
   display: block;
 }
 div header {
-  margin-top: 47px;
+  margin-top: -27px;
   font-size: 80px;
 }
 a {
