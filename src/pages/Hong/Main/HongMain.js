@@ -101,6 +101,7 @@ function HongMain() {
         <div className="main_box">
           <div className="feeds">
             <div className="article">
+            {/* 안녕하세요 커밋용 한소리 */}
               {/* {feedInfo.map((feedList) => {
                 return (
                 <div className='articlebox_head'>
