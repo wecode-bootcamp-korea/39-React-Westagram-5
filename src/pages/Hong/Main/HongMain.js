@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './HongMain.scss';
-import Nav from '../../../components/Nav/Nav';
+// import Nav from '../../../components/Nav/Nav';
 import '../../../styles/mixin.scss';
+import Comment from './comments';
+import { Link_List } from './LinkData';
+import { Link } from 'react-router-dom';
 
 function HongMain() {
   const [input, inputValue] = useState('');
   const [inputBox, setInputBox] = useState([]);
-
+  const [feedInfo, setFeedInfo] = useState([]);
   const saveInputValue = e => {
     inputValue(e.target.value);
   };
@@ -16,7 +19,6 @@ function HongMain() {
     inputArr.push(input);
     setInputBox(inputArr);
     inputValue('');
-    console.log(1);
   };
 
   const enter = e => {
@@ -36,19 +38,42 @@ function HongMain() {
     return randomname;
   }
 */
-  const commentPush = (re, com) => {
-    return (
-      <div key={com} className="replyBox">
-        <span>{/*generateUserName*/}내이름</span>
-        {re}
-      </div>
-    );
-  };
 
-  const replyPush = inputBox.map(commentPush);
+  // const commentPush = inputBox.map(function (input, com) {
+  //   return (
+  //     <div key={com} className="replyBox">
+  //       <span>내이름</span>
+  //       <span>{input}</span>
+  //     </div>
+  //   );
+  // });
+
+  const commentDel = com => () => {
+    let delt = [...inputBox];
+    delt.splice(com, 1);
+    setInputBox(delt);
+  };
+  // const linkComp = () => {
+  //   return (
+  //     <div className="linkComp">
+  //       <ul>
+  //         {Link_List.map(link_List => {
+  //           return <li key={link_List.id}>{link_List.linkName}</li>;
+  //         })}
+  //       </ul>
+  //     </div>
+  //   );
+  // };
+
+  useEffect(() => {
+    fetch('/data/feedInfo.json')
+      .then(response => response.json)
+      .then(result => setFeedInfo(result));
+  }, []);
+
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <header>
         <div className="nav">
           <div className="nav_left">
@@ -66,18 +91,9 @@ function HongMain() {
             <input type="text" placeholder="검색" className="search" />
           </div>
           <div className="nav_right">
-            <img
-              alt="nugget"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-            />
-            <img
-              alt="nugget"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-            />
-            <img
-              alt="nugget"
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-            />
+            <img alt="nugget" src="images/hongseokhyun/explore.png" />
+            <img alt="nugget" src="images/hongseokhyun/heart.png" />
+            <img alt="nugget" src="images/hongseokhyun/profile.png" />
           </div>
         </div>
       </header>
@@ -85,6 +101,27 @@ function HongMain() {
         <div className="main_box">
           <div className="feeds">
             <div className="article">
+              {/* {feedInfo.map((feedList) => {
+                return (
+                <div className='articlebox_head'>
+                  <div className='nuggetaccountpic'>{feedList.userpic}</div>
+                  <div className='accountname'>{feedList.username}</div>
+                  <img
+                  alt="nugget"
+                  src="images/hongseokhyun/menudots.png"
+                  className="menudots"
+                />
+                </div>
+                <div className='feedpic'>
+                  <div>{feedList.feedpic}</div>
+                </div>
+                <div className='under_pic'>
+                  <div className='sticker'>
+                  <div className='left' key={feedList[underpic[id]]}>{feedList[underpic[heart]]}</div>
+                  </div>
+                </div>
+                );
+              })} */}
               <div className="articlebox_head">
                 <img
                   alt="nugget"
@@ -137,13 +174,25 @@ function HongMain() {
                   <div id="comment-count">
                     댓글 <span id="count">0</span>개
                   </div>
-                  <div id="comments">{replyPush}</div>
+                  <div id="comments">
+                    {/* {commentPush} */}
+                    {inputBox.map(function (input, com) {
+                      return (
+                        <Comment
+                          key={com}
+                          input={input}
+                          onDelete={commentDel(com)}
+                        />
+                      );
+                    })}
+                  </div>
                   <div className="fix">
                     <input
                       id="comment-input"
                       placeholder="댓글 달기.."
                       onChange={saveInputValue}
-                      onKeyUp={enter}
+                      onKeyPress={enter}
+                      value={input}
                     />
                     <button id="submit" onClick={commentBox}>
                       게시
@@ -321,6 +370,17 @@ function HongMain() {
                 </div>
                 <div className="follow">팔로우</div>
               </div>
+            </div>
+            <div className="linkComp">
+              <ul>
+                {Link_List.map(link_List => {
+                  return (
+                    <li key={link_List.id}>
+                      <a href={link_List.link}>{link_List.linkName}</a>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>
