@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './CheonLogin.scss';
-import '../../../styles/reset.scss';
 import { useNavigate } from 'react-router-dom';
 
 const CheonLogin = () => {
@@ -16,7 +15,7 @@ const CheonLogin = () => {
     setPwInput(event.target.value);
   };
   const btnActive = () => {
-    emailInput.includes('e.g., @') && pwInput.length > 5
+    emailInput.includes('@') && pwInput.length > 5
       ? setdisabled(false)
       : setdisabled(true);
   };
