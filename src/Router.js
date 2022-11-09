@@ -16,7 +16,7 @@ import KimMain from './pages/Kim/Main/KimMain';
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/cheon" element={<CheonLogin />} />
         <Route path="/hong" element={<HongLogin />} />

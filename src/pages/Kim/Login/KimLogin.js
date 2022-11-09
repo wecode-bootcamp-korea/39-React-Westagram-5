@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './KimLogin.scss';
 import { useNavigate } from 'react-router-dom';
+import './KimLogin.scss';
 
 function KimLogin() {
   const navi = useNavigate();
@@ -28,7 +28,6 @@ function KimLogin() {
         <div className="input_id">
           <input
             onChange={loginId}
-            onKeyDown={keyDown}
             className="login_id"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"

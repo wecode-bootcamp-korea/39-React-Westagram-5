@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import './KimMain.scss';
 import CommentList from './CommentList';
+import Footer from './\bFooter';
+import './KimMain.scss';
 
 const KimMain = () => {
   const navi = useNavigate();
@@ -115,8 +116,13 @@ const KimMain = () => {
               </div>
             </div>
             <ul>
-              {commentArray.map((comment, index) => (
-                <CommentList key={index} comment={comment} />
+              {commentArray.map((comment, index, button) => (
+                <CommentList
+                  key={index}
+                  comment={comment}
+                  button1={button}
+                  button2={button}
+                />
               ))}
             </ul>
             <div className="time">
@@ -160,33 +166,44 @@ const KimMain = () => {
             <div className="right_2_main">
               <div className="rmain">
                 <img src="/images/kimkunwoo/wecode.png" className="wecode" />
-                <a className="text_t">
-                  <b>wecode_39</b>
-                  <br />
-                  <span className="small">
-                    <b>16분 전</b>
-                  </span>
-                </a>
+                <div className="right_2_text">
+                  <a className="text_t">
+                    <b>wecode_39</b>
+                    <br />
+                    <span className="small">
+                      <b>16분 전</b>
+                    </span>
+                  </a>
+                  <div className="follow">
+                    <a className="follow">팔로우</a>
+                  </div>
+                </div>
               </div>
               <div className="rmain">
                 <img src="/images/kimkunwoo/any1.png" className="wecode" />
-                <a className="text_t">
-                  <b>front_end</b>
-                  <br />
-                  <span className="small">
-                    <b>3시간 전</b>
-                  </span>
-                </a>
+                <div className="right_2_text">
+                  <a className="text_t">
+                    <b>front_end</b>
+                    <br />
+                    <span className="small">
+                      <b>3시간 전</b>
+                    </span>
+                  </a>
+                  <a className="follow">팔로우</a>
+                </div>
               </div>
               <div className="rmain">
                 <img src="/images/kimkunwoo/me.png" className="wecode" />
-                <a className="text_t">
-                  <b>kunwoo_Kim</b>
-                  <br />
-                  <span className="small">
-                    <b>20시간 전</b>
-                  </span>
-                </a>
+                <div className="right_2_text">
+                  <a className="text_t">
+                    <b>kunwoo_Kim</b>
+                    <br />
+                    <span className="small">
+                      <b>20시간 전</b>
+                    </span>
+                  </a>
+                  <a className="follow">팔로우</a>
+                </div>
               </div>
             </div>
           </div>
@@ -206,9 +223,7 @@ const KimMain = () => {
                       <b>legend_님 외 2명이 ...</b>
                     </span>
                   </a>
-                  <div className="follow">
-                    <a className="follow">팔로우</a>
-                  </div>
+                  <a className="follow">팔로우</a>
                 </div>
               </div>
               <div className="rmain">
@@ -243,14 +258,7 @@ const KimMain = () => {
               </div>
             </div>
           </div>
-          <div className="right_4">
-            <a className="footer">
-              Instagram 정보 · 지원 · 홍보 센터 · API <br />
-              채용정보 · 개인정보처리방침 · 약관 · <br />
-              디렉터리 · 프로필 · 해시태그 · 언어 <br />
-              <br />@ 2022 WESTAGRAM
-            </a>
-          </div>
+          <Footer />
         </div>
       </div>
     </>
