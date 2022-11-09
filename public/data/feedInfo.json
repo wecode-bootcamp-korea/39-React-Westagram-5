@@ -3,12 +3,7 @@
   "userpic":"images/hongseokhyun/nuggetaccount.png",
   "username": "jindodog_nuu_get",
   "feedpic":"images/hongseokhyun/nuggetbirth.jpg",
-  "underpic":[
-    {"id":1, "heart": "images/hongseokhyun/heart.png"},
-    {"id":2, "heart": "images/hongseokhyun/chat.png"},
-    {"id":3, "heart": "images/hongseokhyun/send.png"},
-    {"id":4, "heart": "images/hongseokhyun/bookmark-white.png"}
-  ],
+  
   "comment":"생일이다"
 },
 {

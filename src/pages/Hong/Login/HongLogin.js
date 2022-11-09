@@ -24,7 +24,7 @@ function HongLogin() {
   const disable = valid ? false : true;
 
   const pressEnter = e => {
-    if (e.code === 'Enter') {
+    if (e.code === 'Enter' && disable === false) {
       goToMain();
     }
   };
@@ -52,7 +52,6 @@ function HongLogin() {
           type="button"
           onClick={goToMain}
           disabled={disable}
-          onKeyUp={pressEnter}
         >
           로그인
         </button>

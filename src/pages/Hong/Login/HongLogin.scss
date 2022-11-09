@@ -1,73 +1,73 @@
 @import '../../../styles/mixin.scss';
 
+body {
+  background-color: #fafafa;
 
-body{
+  .login_container_box {
+    @include flex(flex, normal, center);
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include widhigh(350px, 400px);
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+  }
+
+  .title {
+    @include widhigh(175px, 51px);
+    font-size: 43px;
+    padding: 15px;
+    font-family: 'Lobster';
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .input {
+    @include flex(flex, center, center);
+    flex-direction: column;
+  }
+  input {
+    @include widhigh(250px, 38px);
+    margin-top: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
     background-color: #fafafa;
 
-    .login_container_box{
-        @include flex(flex,normal,center);
-        flex-direction: column;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        @include widhigh(350px,400px);
-        border: 1px solid #dbdbdb;
-        background-color: #fff;
+    &:first-child {
+      margin-top: 15px;
     }
+  }
+  .login_btn {
+    @include flex(flex, center, center);
+    @include widhigh(258px, 35px);
+    margin-top: 20px;
+    background-color: #0095f6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
 
-        .title{
-            @include widhigh(175px,51px);
-            font-size: 43px;
-            padding: 15px;
-            font-family: 'Lobster';
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-            .input{
-                @include flex(flex,center,center);
-                flex-direction: column;
-            }
-                input{
-                    @include widhigh(250px,38px);
-                    margin-top: 5px;
-                    border: 1px solid #dbdbdb;
-                    border-radius: 5px;
-                    background-color: #fafafa;
-                    
-                    &:first-child{
-                        margin-top: 15px;
-                    }
-                }
-                    .login_btn{
-                        @include flex(flex,center,center);
-                        @include widhigh(258px,35px);
-                        margin-top: 20px;
-                        background-color: #0095f6;
-                        border: 0;
-                        border-radius: 5px;
-                        font-size: 15px;
-                        font-weight: 900;
-                        color: white;
-                        cursor: pointer;
-                    
-                        &:disabled{
-                            opacity: 0.4;
-                            cursor: default;
-                        }}
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
 
-                            .wrongPw{
-                                @include widhigh(normal,20px);
-                                margin-top: 40px;
-                                height: 20px;
-                            }
+  .wrongPw {
+    @include widhigh(normal, 20px);
+    margin-top: 40px;
+    height: 20px;
+  }
 
-                                .idk_pw{
-                                    position: absolute;
-                                    bottom: 20px;
-                                
+  .idk_pw {
+    position: absolute;
+    bottom: 20px;
 
-                                &:hover{
-                                    cursor: pointer;
-                                }}
-                                }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
