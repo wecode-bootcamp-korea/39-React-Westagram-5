@@ -87,6 +87,7 @@ article {
   align-items: center;
   justify-content: row;
   padding: 10px 5px;
+  border: #e6e6e6;
   img {
     margin-left: 20px;
     border-radius: 50%;
@@ -227,7 +228,7 @@ article {
   }
 }
 .asideBody {
-  max-height: 183px;
+  max-height: 150px;
   margin-top: 12px;
   overflow-x: hidden;
   border: solid;
@@ -248,11 +249,9 @@ article {
     margin: 7px;
   }
 }
-.asideBodyImgId {
-  margin-right: -13px;
-}
 .asidehi {
   display: flex;
+  position: relative;
   justify-content: left;
   img {
     margin-bottom: 2px;
@@ -268,20 +267,22 @@ article {
       ),
       linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
   }
-  &2 span {
+  span {
     margin: 3px;
     padding: 3px;
     border: none;
     font: caption;
   }
-  &2 p {
+  p {
     margin-top: -1px;
     margin-left: 6px;
     color: gray;
     font-size: 14px;
   }
   button {
-    margin: 13px;
+    position: absolute;
+    right: 0;
+
     border: none;
     background-color: white;
     color: #3e99ed;
@@ -328,4 +329,31 @@ aside {
 .asideDown {
   margin-top: 10px;
   color: gray;
+  li {
+    display: inline-block;
+    position: relative;
+    & + li {
+      margin-left: 3px;
+      padding-left: 3px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 43%;
+        left: -1.5px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: rgb(191, 188, 188);
+      }
+    }
+  }
+}
+a {
+  color: rgb(195, 191, 191);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.pInput {
+  color: rgb(194, 189, 189);
 }
