@@ -22,7 +22,7 @@ function HongMain() {
   };
 
   const enter = e => {
-    if (e.code === 'Enter') {
+    if (e.code === 'Enter' && e.nativeEvent.isComposing === false) {
       commentBox();
     }
   };
@@ -101,7 +101,7 @@ function HongMain() {
         <div className="main_box">
           <div className="feeds">
             <div className="article">
-            {/* 안녕하세요 커밋용 한소리 */}
+              {/* 안녕하세요 커밋용 한소리 */}
               {/* {feedInfo.map((feedList) => {
                 return (
                 <div className='articlebox_head'>
@@ -192,7 +192,7 @@ function HongMain() {
                       id="comment-input"
                       placeholder="댓글 달기.."
                       onChange={saveInputValue}
-                      onKeyPress={enter}
+                      onKeyDown={enter}
                       value={input}
                     />
                     <button id="submit" onClick={commentBox}>
