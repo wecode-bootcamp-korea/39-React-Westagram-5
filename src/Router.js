@@ -11,6 +11,7 @@ import KimLogin from './pages/Kim/KimLogin';
 import OhLogin from './pages/Oh/OhLogin';
 import NamLogin from './pages/Nam/Login/NamLogin';
 import NamMain from './pages/Nam/Main/NamMain';
+import Parent from './pages/Nam/practice/Parent';
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function Router() {
         <Route path="/oh" element={<OhLogin />} />
         <Route path="/namlogin" element={<NamLogin />} />
         <Route path="/nammain" element={<NamMain />} />
+        <Route path="/parent" element={<Parent />} />
       </Routes>
     </BrowserRouter>
   );

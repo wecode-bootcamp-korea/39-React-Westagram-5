@@ -3,6 +3,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 // import profile from '/images/yeonwoonam/profile.jpg';
 // import feedpic from './feed-picture.jpg';
+import Footer from '../Footer';
 
 function NamMain() {
   return (
@@ -80,6 +81,7 @@ function NamMain() {
           <div className="side-bottom" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -192,14 +192,16 @@ button:hover {
 .location-id-wrap {
   display: flex;
   flex-direction: column;
-  padding: 10px 3px;
+  padding: 5px 3px;
   opacity: 0.8;
-  font-weight: 620;
+  font-family: monospace, arial;
+  font-weight: 600;
 }
+
 a {
   color: black;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 13px;
+  font-family: 'Segoe UI', monospace, arial;
+  font-size: 10px;
   text-decoration: none;
 }
 
