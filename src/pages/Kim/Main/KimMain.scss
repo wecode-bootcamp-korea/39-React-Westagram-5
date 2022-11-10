@@ -94,12 +94,16 @@ input:focus {
   width: 250px;
   height: 30px;
 }
+.main {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
 
 .feeds {
+  width: calc(100% - 350px);
   margin-top: 60px;
-  margin-left: 100px;
   border: 1px solid #bbb;
-  float: left;
 }
 
 .article_head {
@@ -117,8 +121,7 @@ input:focus {
 }
 
 .leo {
-  width: 550px;
-  height: 580px;
+  width: 100%;
 }
 .like_re {
   margin-left: 5px;
@@ -242,9 +245,9 @@ input:focus {
 /*오른쪽 부분*/
 
 .right {
-  margin-top: 60px;
-  float: right;
-  margin-right: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 300px;
 }
 

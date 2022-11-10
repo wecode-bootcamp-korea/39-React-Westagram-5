@@ -51,122 +51,121 @@ const KimMain = () => {
           </div>
         </div>
         <div className="main">
-          <div className="feeds">
-            {feedDataList.map((feed, index) => (
-              <Feed key={index} feed={feed} />
-            ))}
-          </div>
-        </div>
-        <div className="right">
-          <div className="right_1">
-            <img src="/images/kimkunwoo/wecode.png" className="wecode" />
-            <a className="text_t">
-              <b>wecode_bootcamp</b>
-              <br />
-              <span className="small">WeCode | 위코드</span>
-            </a>
-          </div>
-          <div className="right_2">
-            <div className="right_2_head">
-              <a className="hmain">스토리</a>
-              <a className="allSee">모두 보기</a>
+          {feedDataList.map((feed, index) => (
+            <Feed key={index} feed={feed} />
+          ))}
+
+          <div className="right">
+            <div className="right_1">
+              <img src="/images/kimkunwoo/wecode.png" className="wecode" />
+              <a className="text_t">
+                <b>wecode_bootcamp</b>
+                <br />
+                <span className="small">WeCode | 위코드</span>
+              </a>
             </div>
-            <div className="right_2_main">
-              <div className="rmain">
-                <img src="/images/kimkunwoo/wecode.png" className="wecode" />
-                <div className="right_2_text">
-                  <a className="text_t">
-                    <b>wecode_39</b>
-                    <br />
-                    <span className="small">
-                      <b>16분 전</b>
-                    </span>
-                  </a>
-                  <div className="follow">
+            <div className="right_2">
+              <div className="right_2_head">
+                <a className="hmain">스토리</a>
+                <a className="allSee">모두 보기</a>
+              </div>
+              <div className="right_2_main">
+                <div className="rmain">
+                  <img src="/images/kimkunwoo/wecode.png" className="wecode" />
+                  <div className="right_2_text">
+                    <a className="text_t">
+                      <b>wecode_39</b>
+                      <br />
+                      <span className="small">
+                        <b>16분 전</b>
+                      </span>
+                    </a>
+                    <div className="follow">
+                      <a className="follow">팔로우</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="rmain">
+                  <img src="/images/kimkunwoo/any1.png" className="wecode" />
+                  <div className="right_2_text">
+                    <a className="text_t">
+                      <b>front_end</b>
+                      <br />
+                      <span className="small">
+                        <b>3시간 전</b>
+                      </span>
+                    </a>
+                    <a className="follow">팔로우</a>
+                  </div>
+                </div>
+                <div className="rmain">
+                  <img src="/images/kimkunwoo/me.png" className="wecode" />
+                  <div className="right_2_text">
+                    <a className="text_t">
+                      <b>kunwoo_Kim</b>
+                      <br />
+                      <span className="small">
+                        <b>20시간 전</b>
+                      </span>
+                    </a>
                     <a className="follow">팔로우</a>
                   </div>
                 </div>
               </div>
-              <div className="rmain">
-                <img src="/images/kimkunwoo/any1.png" className="wecode" />
-                <div className="right_2_text">
-                  <a className="text_t">
-                    <b>front_end</b>
-                    <br />
-                    <span className="small">
-                      <b>3시간 전</b>
-                    </span>
-                  </a>
-                  <a className="follow">팔로우</a>
-                </div>
+            </div>
+            <div className="right_3">
+              <div className="right_2_head">
+                <a className="hmain">회원님을 위한 추천</a>
+                <a className="allSee">모두 보기</a>
               </div>
-              <div className="rmain">
-                <img src="/images/kimkunwoo/me.png" className="wecode" />
-                <div className="right_2_text">
-                  <a className="text_t">
-                    <b>kunwoo_Kim</b>
-                    <br />
-                    <span className="small">
-                      <b>20시간 전</b>
-                    </span>
-                  </a>
-                  <a className="follow">팔로우</a>
+              <div className="right_2_main">
+                <div className="rmain">
+                  <img src="/images/kimkunwoo/any2.png" className="wecode" />
+                  <div className="right_2_text">
+                    <a>
+                      <b>kkwekdf</b>
+                      <br />
+                      <span className="small">
+                        <b>legend_님 외 2명이 ...</b>
+                      </span>
+                    </a>
+                    <a className="follow">팔로우</a>
+                  </div>
+                </div>
+                <div className="rmain">
+                  <img src="/images/kimkunwoo/any3.png" className="wecode" />
+                  <div className="right_2_text">
+                    <a>
+                      <b>supreme_korea</b>
+                      <br />
+                      <span className="small">
+                        <b>gunwoo님 외 2명이 ...</b>
+                      </span>
+                    </a>
+                    <a className="follow">팔로우</a>
+                  </div>
+                </div>
+                <div className="rmain">
+                  <img
+                    src="/images/kimkunwoo/wecode.png"
+                    alt="wecode"
+                    className="wecode"
+                  />
+                  <div className="right_2_text">
+                    <a>
+                      <b>wecode_bootcamp</b>
+                      <br />
+                      <span className="small">
+                        <b>wecode님 외 2명이 ...</b>
+                      </span>
+                    </a>
+                    <a className="follow">팔로우</a>
+                  </div>
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
-          <div className="right_3">
-            <div className="right_2_head">
-              <a className="hmain">회원님을 위한 추천</a>
-              <a className="allSee">모두 보기</a>
-            </div>
-            <div className="right_2_main">
-              <div className="rmain">
-                <img src="/images/kimkunwoo/any2.png" className="wecode" />
-                <div className="right_2_text">
-                  <a>
-                    <b>kkwekdf</b>
-                    <br />
-                    <span className="small">
-                      <b>legend_님 외 2명이 ...</b>
-                    </span>
-                  </a>
-                  <a className="follow">팔로우</a>
-                </div>
-              </div>
-              <div className="rmain">
-                <img src="/images/kimkunwoo/any3.png" className="wecode" />
-                <div className="right_2_text">
-                  <a>
-                    <b>supreme_korea</b>
-                    <br />
-                    <span className="small">
-                      <b>gunwoo님 외 2명이 ...</b>
-                    </span>
-                  </a>
-                  <a className="follow">팔로우</a>
-                </div>
-              </div>
-              <div className="rmain">
-                <img
-                  src="/images/kimkunwoo/wecode.png"
-                  alt="wecode"
-                  className="wecode"
-                />
-                <div className="right_2_text">
-                  <a>
-                    <b>wecode_bootcamp</b>
-                    <br />
-                    <span className="small">
-                      <b>wecode님 외 2명이 ...</b>
-                    </span>
-                  </a>
-                  <a className="follow">팔로우</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Footer />
         </div>
       </div>
     </>
