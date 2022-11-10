@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "kunwoooo",
+    "img": "/images/kimkunwoo/me.png",
+    "feedImg": "/images/kimkunwoo/leo.jpeg",
+
+    "comment_text1": "39기화이팅",
+    "comment_text2": "위코드 위코드"
+  },
+  {
+    "id": 2,
+    "name": "wecode",
+    "img": "/images/kimkunwoo/wecode.png",
+    "feedImg": "/images/kimkunwoo/wecode2.png",
+
+    "comment_text1": "39기화이팅",
+    "comment_text2": "위코드 위코드"
+  },
+  {
+    "id": 3,
+    "name": "wecode",
+    "img": "/images/kimkunwoo/wecode.png",
+    "feedImg": "/images/kimkunwoo/wecode2.png",
+
+    "comment_text1": "프론트 화이팅",
+    "comment_text2": "위코드39기 화이팅"
+  },
+  {
+    "id": 4,
+    "name": "wecode",
+    "img": "/images/kimkunwoo/wecode.png",
+    "feedImg": "/images/kimkunwoo/wecode2.png",
+
+    "comment_text1": "프론트 화이팅",
+    "comment_text2": "위코드39기 화이팅"
+  }
+]

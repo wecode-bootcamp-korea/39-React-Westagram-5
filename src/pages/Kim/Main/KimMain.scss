@@ -1,0 +1,351 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.insta {
+  margin-right: 10px;
+  margin-left: 50px;
+  width: 36px;
+  height: 36px;
+}
+
+.find {
+  text-align: center;
+}
+
+.searchbar {
+  width: 250px;
+
+  input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    margin-top: 6px;
+    background-color: rgba(238, 235, 235, 0.288);
+    border: 1px solid rgba(218, 217, 217, 0.767);
+
+    &::placeholder {
+      font-size: 1rem;
+      color: silver;
+      text-align: center;
+      background: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png)
+        no-repeat 35% (center / 20px) 20px;
+      filter: invert(0.5);
+    }
+  }
+}
+
+input:focus {
+  outline: 1px solid rgb(179, 179, 179);
+}
+
+.explore {
+  margin-left: 120px;
+  margin-left: 12px;
+  width: 36px;
+  height: 36px;
+}
+
+.heart,
+.profile {
+  margin-left: 12px;
+  width: 36px;
+  height: 36px;
+}
+
+.imgTop {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heart {
+  margin-left: 15px;
+}
+
+.profile {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+/*왼쪽 아래*/
+
+.text {
+  font-size: 20px;
+}
+
+.logoMain {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding-left: 15px;
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+}
+
+.find {
+  margin-left: 120px;
+  width: 250px;
+  height: 30px;
+}
+.main {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.feeds {
+  width: calc(100% - 350px);
+  margin-top: 60px;
+  border: 1px solid #bbb;
+}
+
+.article_head {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dotdotdot {
+  padding-left: 340px;
+}
+
+.text {
+  margin-left: 10px;
+}
+
+.leo {
+  width: 100%;
+}
+.like_re {
+  margin-left: 5px;
+}
+
+#commentLists {
+  margin-top: 0.6rem;
+  margin-bottom: 0.7rem;
+
+  li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    position: relative;
+    color: black;
+  }
+}
+
+.comment_likebutton {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.new_comment {
+  border-top: 1px solid #bbb;
+  width: 100%;
+  position: relative;
+}
+.time {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.pClass {
+  margin-left: 10px;
+}
+.pclassName {
+  margin-left: 10px;
+}
+
+.new_comment {
+  border-top: 1px solid #bbb;
+  width: 100%;
+  position: relative;
+
+  input {
+    width: 90%;
+    border: none;
+    padding: 20px 0;
+    padding-left: 15px;
+  }
+}
+
+.previous_comment {
+  margin-left: 10px;
+  position: relative;
+}
+
+.new_comment input:focus {
+  outline: none;
+}
+
+.upload_button {
+  padding: 15px 15px;
+  border: none;
+  font-size: 0.8rem;
+  position: absolute;
+  color: rgba(113, 147, 238, 0.747);
+  background-color: white;
+  right: 0px;
+  top: 6px;
+
+  &:hover {
+    border: none;
+    background: none;
+    color: rgba(113, 147, 238, 0.747);
+  }
+}
+
+.delete {
+  cursor: pointer;
+  position: absolute;
+  right: 19px;
+}
+
+.name {
+  padding-right: 0.6rem;
+  color: black;
+  font-weight: bold;
+}
+
+.emo {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  .r_heart,
+  .comment_C,
+  .share {
+    margin-left: 5px;
+  }
+
+  img {
+    width: 30px;
+  }
+}
+
+.scrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+/*오른쪽 부분*/
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+
+.right_1 {
+  display: flex;
+  direction: row;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.right_2_head {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #bbb;
+}
+
+.right_2_main {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.right_2,
+.right_3 {
+  border: 1px solid #bbb;
+  margin-bottom: 20px;
+}
+
+.wecode {
+  border: 1px solid #f7037a;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.wecode_w {
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  margin-left: 10px;
+}
+
+.right_2_text {
+  display: flex;
+  margin-left: 10px;
+  width: calc(100% - 50px);
+  justify-content: space-between;
+}
+
+.follow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rmain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px 10px 5px;
+}
+
+.text_t {
+  margin-left: 10px;
+}
+
+.follow {
+  color: #439cf1;
+}
+
+.follow1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hmain {
+  color: #9c9c9c;
+}
+
+.allSee {
+  color: black;
+  text-decoration-line: none;
+}
+
+.follow {
+  text-decoration-line: none;
+}
+
+.small {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.footer {
+  a {
+    color: #bbb;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
