@@ -19,6 +19,7 @@ function KimLogin() {
     }
   };
   const loginValid = id && id.includes('@') && pw && pw.length >= 4;
+
   return (
     <>
       <div className="all_login">
@@ -43,7 +44,21 @@ function KimLogin() {
         <div className="login_button">
           <button
             onClick={() => {
-              navi('/KimMain');
+              fetch('http://10.58.52.196:3000/posts', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json;charset=utf-8',
+                  Authorization:
+                    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzIsImlhdCI6MTY2ODA2NDE0NSwiZXhwIjoxNjY4NjY4OTQ1fQ.QRLRglyAqVWvC5lbQ4EseCVCaYffUs21PPVD4oRv1O4',
+                },
+                body: JSON.stringify({
+                  title: 'hamburddg',
+                  content: 'pizzdda',
+                  contentImage: 'burgdder',
+                }),
+              }) //요청
+                .then(response => response.json())
+                .then(data => console.log(data));
             }}
             disabled={!loginValid ? true : false}
             className="login_btn"

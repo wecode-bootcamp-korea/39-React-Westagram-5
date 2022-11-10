@@ -5,20 +5,15 @@ import './KimMain.scss';
 const Footer = () => {
   return (
     <div className="right_4">
-      <a className="footer">
-        {FOOTER_LIST.map(foot => (
-          <a>{foot.data1}</a>
-        ))}
-        <br></br>
-        {FOOTER_LIST.map(foot => (
-          <a>{foot.data2}</a>
-        ))}
-        <br></br>
-        <br></br>
-        {FOOTER_LIST.map(foot => (
-          <a>{foot.data3}</a>
-        ))}
-      </a>
+      <div className="footer">
+        {FOOTER_LIST.map(footer => {
+          return (
+            <a key={footer.id} href={footer.link}>
+              {footer.name}
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 };
