@@ -9,6 +9,7 @@ import HongMain from './pages/Hong/Main//HongMain';
 import KimLogin from './pages/Kim/KimLogin';
 import OhLogin from './pages/Oh/OhLogin';
 import NamLogin from './pages/Nam/NamLogin';
+import SignUp from './pages/Hong/SignUp/SignUp';
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
         <Route path="/cheon" element={<CheonLogin />} />
         <Route path="/HongLogin" element={<HongLogin />} />
         <Route path="/HongMain" element={<HongMain />} />
+        <Route path="/SignUp" element={<SignUp />} />
         <Route path="/kim" element={<KimLogin />} />
         <Route path="/oh" element={<OhLogin />} />
         <Route path="/nam" element={<NamLogin />} />

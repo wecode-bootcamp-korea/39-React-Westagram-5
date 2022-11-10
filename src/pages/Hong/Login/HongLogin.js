@@ -29,8 +29,38 @@ function HongLogin() {
     }
   };
 
+  // const signUp = () => {
+  //   fetch('http://10.58.52.182:3000/login', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({ email: id, password: pw }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       localStorage.setItem('sohard-token', data);
+  //     });
+  // };
+  const Login = () => {
+    fetch('http://10.58.52.182:3000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({ email: id, password: pw }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        localStorage.setItem('sohard-token', data.accessToken);
+        goToMain();
+      });
+  };
+
   return (
-    <form className="login_container_box">
+    <div className="login_container_box">
       <h1 className="title">westagram</h1>
       <div className="input">
         <input
@@ -50,17 +80,17 @@ function HongLogin() {
         <button
           className="login_btn"
           type="button"
-          onClick={goToMain}
+          onClick={Login}
           disabled={disable}
         >
           로그인
         </button>
       </div>
       <p className="wrongPw">
-        <Link to="/Signup"> 회원가입</Link>
+        <Link to="/SignUp"> 회원가입</Link>
       </p>
       <span className="idk_pw">비밀번호를 잊으셨나요?</span>
-    </form>
+    </div>
   );
 }
 

@@ -1,48 +1,30 @@
-[{
-  "id":1,
-  "userpic":"images/hongseokhyun/nuggetaccount.png",
-  "username": "jindodog_nuu_get",
-  "feedpic":"images/hongseokhyun/nuggetbirth.jpg",
-  
-  "comment":"생일이다"
-},
-{
-  "id":2,
-  "userpic":"images/hongseokhyun/nuggetaccount.png",
-  "username": "jindodog_nuu_get",
-  "feedpic":"images/hongseokhyun/nuggetface.jpg",
-  "underpic":[
-    {"id":1, "heart": "images/hongseokhyun/heart.png"},
-    {"id":2, "heart": "images/hongseokhyun/chat.png"},
-    {"id":3, "heart": "images/hongseokhyun/send.png"},
-    {"id":4, "heart": "images/hongseokhyun/bookmark-white.png"}
-  ],
-  "comment":"셀카"
-},
-{
-  "id":3,
-  "userpic":"images/hongseokhyun/nuggetaccount.png",
-  "username": "jindodog_nuu_get",
-  "feedpic":"images/hongseokhyun/happynugget.jpg",
-  "underpic":[
-    {"id":1, "heart": "images/hongseokhyun/heart.png"},
-    {"id":2, "heart": "images/hongseokhyun/chat.png"},
-    {"id":3, "heart": "images/hongseokhyun/send.png"},
-    {"id":4, "heart": "images/hongseokhyun/bookmark-white.png"}
-  ],
-  "comment":"친구들만나서 신남"
-},
-{
-  "id":4,
-  "userpic":"images/hongseokhyun/nuggetaccount.png",
-  "username": "jindodog_nuu_get",
-  "feedpic":"images/hongseokhyun/nuggetbirth.jpg",
-  "underpic":[
-    {"id":1, "heart": "images/hongseokhyun/heart.png"},
-    {"id":2, "heart": "images/hongseokhyun/chat.png"},
-    {"id":3, "heart": "images/hongseokhyun/send.png"},
-    {"id":4, "heart": "images/hongseokhyun/nugget_swim.mp4"}
-  ],
-  "comment":"수영하기싫다"
-}
+[
+  {
+    "id": 1,
+    "userpic": "images/hongseokhyun/nuggetaccount.png",
+    "username": "jindodog_nuu_get",
+    "feedpic": "images/hongseokhyun/nuggetbirth.jpg",
+    "comment": "생일이다"
+  },
+  {
+    "id": 2,
+    "userpic": "images/hongseokhyun/nuggetaccount.png",
+    "username": "jindodog_nuu_get",
+    "feedpic": "images/hongseokhyun/nuggetface.jpg",
+    "comment": "셀카"
+  },
+  {
+    "id": 3,
+    "userpic": "images/hongseokhyun/nuggetaccount.png",
+    "username": "jindodog_nuu_get",
+    "feedpic": "images/hongseokhyun/happynugget.jpg",
+    "comment": "친구들만나서 신남"
+  },
+  {
+    "id": 4,
+    "userpic": "images/hongseokhyun/nuggetaccount.png",
+    "username": "jindodog_nuu_get",
+    "feedpic": "images/hongseokhyun/mountainnugget.jpg",
+    "comment": "산이좋다"
+  }
 ]

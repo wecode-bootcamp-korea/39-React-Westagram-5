@@ -251,6 +251,7 @@
 
         .push {
           @include flex(flex, space-between, center);
+          width: 321px;
           position: relative;
           height: 18px;
           padding: 0px 16px;
