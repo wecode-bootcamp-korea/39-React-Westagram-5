@@ -1,5 +1,5 @@
 import React from 'react';
-import { FOOTER_INFO_LIST } from './data';
+import { FOOTER_INFO_LIST } from './FooterData';
 
 const Footer = () => {
   return (

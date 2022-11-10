@@ -1,11 +1,31 @@
 import './NamMain.scss';
 import React from 'react';
+import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import profile from '/images/yeonwoonam/profile.jpg';
 // import feedpic from './feed-picture.jpg';
 import Footer from '../Footer';
 
 function NamMain() {
+  // console.log(localStorage.getItem('token'));
+
+  const [commentInput, setCommentInput] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  const handleClickBtn = () => {
+    const pushedComments = [...commentList, commentInput];
+    setCommentList(pushedComments); //...은 스프레드 오퍼레이터
+    setCommentInput('');
+  };
+  console.log(commentInput);
+
+  const saveCommentInput = event => {
+    const newComment = event.target.value;
+    setCommentInput(newComment);
+  };
+
+  const active = commentInput.length < 5;
+
   return (
     <div>
       <meta charSet="UTF-8" />
@@ -16,18 +36,18 @@ function NamMain() {
       <nav className="nav-wrap">
         <div className="nav-left">
           <div className="camera-logo">
-            <button class="camera-logo-2" type="text" />
+            <button className="camera-logo-2" type="text" />
           </div>
           <div className="westagram-logo">WeCodestagram</div>
         </div>
-        <div class="nav-middle">
-          <input class="search-bar" type="text" />
+        <div className="nav-middle">
+          <input className="search-bar" type="text" />
         </div>
 
         <div className="nav-right">
-          <button class="compass-icon" />
-          <button class="like-icon" />
-          <button class="profile-icon" />
+          <button className="compass-icon" />
+          <button className="like-icon" />
+          <button className="profile-icon" />
         </div>
       </nav>
       {/*여기서부터 메인*/}
@@ -38,7 +58,7 @@ function NamMain() {
               <div className="personal-logo">
                 <img
                   src="/images/yeonwoonam/profile.jpg"
-                  alt='"profile"'
+                  alt="profile"
                   className="profile-pic"
                 />
               </div>
@@ -73,6 +93,44 @@ function NamMain() {
             <div className="bottom-right-wrap">
               <button type="button" className="active-save save-content" />
             </div>
+          </div>
+          <div className="liked-wrap">
+            <img
+              className="represent-liked"
+              src="/images/yeonwoonam/profile.jpg"
+              alt="profile"
+            />
+            <span className="liked-number">
+              Liked by <b>wecode</b> and <b>132 others</b>
+            </span>
+          </div>
+          <div className="all-comments">
+            {commentList.map((comment, index) => (
+              <div key={index} className="comments">
+                <span className="nickname">wecoder</span>
+                <span className="actCommentn">{comment}</span>
+                <span className="material-symbol" />
+              </div>
+            ))}
+          </div>
+          <div className="new-comment">
+            <input
+              id="name"
+              className="add-comment"
+              type="text"
+              placeholder="Add a comment..."
+              onChange={saveCommentInput}
+              value={commentInput}
+            />
+            <button
+              type="button"
+              className="post-button"
+              id="submit"
+              disabled={active}
+              onClick={handleClickBtn}
+            >
+              Post
+            </button>
           </div>
         </div>
         <div className="side-wrap">

@@ -4,9 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer';
 import { useState } from 'react';
 // useNavigate외에 다른 방법으론 import { Link } from 'react-router-dom';
-
 function NamLogin() {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const [inputId, setInputId] = useState('');
   const [inputPw, setInputPw] = useState('');
   const handleIdInput = e => {
@@ -18,12 +17,32 @@ function NamLogin() {
   };
   const handleActive = inputId.includes('@') && inputPw.length >= 5;
   // inputId && inputId.includes('@') && inputPw && inputPw.length >= 5;
+  const onKeyPress = e => {
+    if (e.key === 'Enter' && handleActive === true) {
+      navigate('/nammain');
+    }
+  };
+  const onClickLogin = e => {
+    fetch('http://10.58.52.203:3000/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+
+      body: JSON.stringify({ email: inputId, password: inputPw }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        localStorage.setItem('token', data.accessToken);
+        navigate('/nammain');
+      });
+  };
 
   return (
     <>
       <div className="wrapper">
         <div className="logo-container">
-          <sapn className="westa-logo">Westagram</sapn>
+          <span className="westa-logo">Westagram</span>
         </div>
         <div className="login-container">
           <div className="bar-wrapper">
@@ -33,6 +52,7 @@ function NamLogin() {
                 type="text"
                 placeholder="Phone number, username, or Email"
                 onChange={handleIdInput}
+                onKeyPress={onKeyPress}
               />
             </div>
           </div>
@@ -43,6 +63,7 @@ function NamLogin() {
                 type="password"
                 placeholder="Password"
                 onChange={handlePwInput}
+                onKeyPress={onKeyPress}
               />
             </div>
           </div>
@@ -50,9 +71,10 @@ function NamLogin() {
             <div className="button-wrap">
               <button
                 disabled={!handleActive ? true : false}
-                onClick={() => {
-                  Navigate('/nammain');
-                }}
+                // onClick={() => {
+                //   Navigate('/nammain');
+                // }}
+                onClick={onClickLogin}
                 type="submit"
               >
                 Log in

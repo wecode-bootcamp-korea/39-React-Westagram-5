@@ -5,6 +5,7 @@
   width: 100%;
   height: 60px;
   border-bottom: 1px solid #dddddd;
+  background: white;
 }
 
 .nav-left {
@@ -57,6 +58,8 @@
 .search-bar {
   width: 250px;
   height: 38px;
+  padding-top: 10px;
+  padding-left: 40px;
   border: none;
   border-style: none;
   background-color: transparent;
@@ -64,7 +67,7 @@
   background-repeat: no-repeat;
   background-size: 20px;
   background-position-x: 20px;
-  background-position-y: 10px;
+  background-position-y: 15px;
   &:focus {
     background-image: none;
   }
@@ -120,11 +123,11 @@
   margin-top: 50px;
   margin-right: 10px;
   margin-left: 50px;
-  background-color: beige;
 }
 
 .feeds-wrap {
   width: 470px;
+  height: 900px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: pink;
@@ -171,9 +174,11 @@ a:hover {
 }
 
 .more-button {
+  width: 30px;
   border: none;
   opacity: 0.8;
   background-color: transparent;
+  color: black;
   font-size: 20px;
   font-weight: bold;
 }
@@ -183,7 +188,6 @@ button:hover {
   cursor: pointer;
 }
 .profile-pic {
-  width: 100%;
   height: 100%;
   border: 0.2px;
   border-radius: 50%;
@@ -192,7 +196,7 @@ button:hover {
 .location-id-wrap {
   display: flex;
   flex-direction: column;
-  padding: 5px 3px;
+  padding: 10px 3px;
   opacity: 0.8;
   font-family: monospace, arial;
   font-weight: 600;
@@ -271,4 +275,73 @@ a {
 
 .active-like {
   background-image: url('../../../../public/images/yeonwoonam/heart-unfilled.png');
+}
+
+.liked-number {
+  justify-content: center;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.represent-liked {
+  width: 20px;
+  height: 100%;
+  margin-left: 10px;
+  border: 0.2px;
+  border-radius: 50%;
+}
+
+.all-comments {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+}
+
+.comments {
+  display: flex;
+  justify-content: space-between;
+}
+
+.practice-wrap {
+  height: 20px;
+}
+
+.new-comment {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.add-comment {
+  width: 400px;
+  margin: 0 0;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+}
+
+.post-button {
+  width: 50px;
+  border: none;
+  border-style: none;
+  background-color: transparent;
+  color: blue;
+}
+
+body b {
+  font: revert;
+}
+
+.img-location {
+  font-size: 13px;
+}
+
+.comment {
+  justify-content: space-between;
+}
+
+.button:disabled {
+  width: 50px;
+  background-color: transparent;
+  color: black;
 }
