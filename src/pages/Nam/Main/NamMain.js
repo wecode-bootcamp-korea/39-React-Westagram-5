@@ -109,7 +109,7 @@ function NamMain() {
               <div key={index} className="comments">
                 <span className="nickname">wecoder</span>
                 <span className="actCommentn">{comment}</span>
-                <span className="material-symbol" />
+                {/* <span className="material-symbol" /> */}
               </div>
             ))}
           </div>
