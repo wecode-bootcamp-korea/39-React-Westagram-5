@@ -18,18 +18,41 @@ function Login() {
   const handleActive = inputId.includes('@') !== -1 && inputPw.length >= 5;
 
   const fetchFn = () => {
-    fetch('api주소', {
+    fetch('http://10.58.52.230:3008/auth/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json;charset=utf-8' },
-      body: JSON.stringify({ userId: inputId, userPassword: inputPw }),
+      body: JSON.stringify({ email: inputId, password: inputPw }),
     }) //요청
-      .then(response => response.json())
-      .then(data => console.log(data));
+      .then(response => {
+        console.log(response);
+        if (response.status != 200) {
+          throw new Error('error');
+          alert('로그인 실패');
+        }
+
+        return response.json();
+      })
+      .catch(err => {
+        console.log(err);
+        alert('로그인 실패');
+      })
+      .then(data => {
+        console.log(data);
+        localStorage.setItem('token', data.accessToken);
+        navigate('/ohMain');
+        // idPwValid();
+      });
   };
 
-  const navigateMain = () => {
-    navigate('/ohMain');
-  };
+  // const navigateMain = () => {
+  //   navigate('/ohMain');
+  // };
+
+  // const idPwValid = () => {
+  //   inputId === 'rivejunee@naver.com' && inputPw === 'riverjune112'
+  //     ? navigate('/ohMain')
+  //     : alert('아이디나 비밀번호를 확인하세요!');
+  // };
 
   return (
     <div className="outline-box">

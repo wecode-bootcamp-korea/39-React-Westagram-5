@@ -13,7 +13,7 @@ function Main() {
         setFeedList(data);
       });
   }, []);
-  console.log(feedList);
+
   return (
     <div className="container">
       <div className="nav_container">
