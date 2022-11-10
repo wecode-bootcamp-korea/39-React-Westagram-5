@@ -153,8 +153,10 @@ function Main() {
 
           <ul className="info">
             {INFO_LIST.map(infolist => (
-              <li key={infolist.id}>
-                <a href={infolist.link}>{infolist.text}</a>
+              <li key={infolist.id} className="infolist_box">
+                <a href={infolist.link} className="infolist">
+                  {infolist.text}
+                </a>
               </li>
             ))}
           </ul>

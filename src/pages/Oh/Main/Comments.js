@@ -1,14 +1,20 @@
-const commentsList = props => {
+const commentsList = ({ commentValue, removeComments, id }) => {
   return (
-    <div className="commentsBox">
+    <div className="commentsBox" key={commentValue.id}>
       <p className="userName">
         nerd_cloud
-        <span className="userComment">{props.commentValue}</span>
+        <span className="userComment">{commentValue}</span>
       </p>
-      <i className="far fa-heart fa-sm" />
+      <div className="commentsIcons">
+        <button className="commentHeart">
+          <i className="far fa-heart commentHeart fa-sm" />
+        </button>
+        <button className="commentTrash" onClick={removeComments} id={id}>
+          <i className="far fa-trash-alt" onClick={removeComments} id={id} />
+        </button>
+      </div>
     </div>
   );
-  console.log(props.commentValue);
 };
 
 export default commentsList;
