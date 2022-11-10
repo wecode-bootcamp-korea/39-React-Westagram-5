@@ -2,26 +2,30 @@ import React from 'react';
 
 function Nav() {
   return (
-    <div class="nav_container">
-      <div class="nav_left">
-        <i class="fab fa-instagram" />
-        <div class="bar">|</div>
-        <div class="instagram-logo">westagram</div>
+    <div className="nav_container">
+      <div className="nav_left">
+        <i className="fab fa-instagram" />
+        <div className="bar">|</div>
+        <div className="instagram-logo">westagram</div>
       </div>
 
-      <div class="search-container">
-        <div class="search-bar">
-          <i class="fas fa-search" />
-          <input class="search-bar__input" type="search" placeholder="검색" />
+      <div className="search-container">
+        <div className="search-bar">
+          <i className="fas fa-search" />
+          <input
+            className="search-bar__input"
+            type="search"
+            placeholder="검색"
+          />
         </div>
       </div>
 
-      <div class="nav_right">
-        <i class="far fa-compass fa-lg" />
-        <i class="far fa-heart nav__icon fa-lg">
-          <span class="heart_notification" />
+      <div className="nav_right">
+        <i className="far fa-compass fa-lg" />
+        <i className="far fa-heart nav__icon fa-lg">
+          <span className="heart_notification" />
         </i>
-        <i class="far fa-user fa-lg" />
+        <i className="far fa-user fa-lg" />
       </div>
     </div>
   );

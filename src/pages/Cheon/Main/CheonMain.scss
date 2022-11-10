@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+}
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  padding: 30px;
+  border-bottom: 1px solid;
+  border-color: #e6e6e6;
+  text-align: center;
+}
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+
+  span {
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid black;
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+.headerSearchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  background-color: #fafafa;
+  font-size: 0px;
+  .fas {
+    position: relative;
+    left: 42%;
+    font-size: 21px;
+  }
+}
+input {
+  width: 230px;
+  padding: 5px;
+  border: none;
+  background-color: #fafafa;
+  text-align: center;
+}
+.headerRightImage {
+  font-size: 30px;
+  a {
+    padding: 10px;
+    color: gray;
+    font-size: 25px;
+  }
+}
+.fa-instagram {
+  color: black;
+  font-size: 30px;
+}
+.fa-search {
+  color: #e6e6e6;
+  text-align: center;
+}
+.body1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 30px;
+  padding-top: 20px;
+  gap: 40px;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  width: 615px;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+}
+.feedHeader {
+  display: flex;
+  align-items: center;
+  justify-content: row;
+  padding: 10px 5px;
+  border: #e6e6e6;
+  img {
+    margin-left: 20px;
+    border-radius: 50%;
+  }
+  span {
+    padding-left: 10px;
+    border: 0;
+    font: caption;
+  }
+  a {
+    padding-left: 415px;
+    color: black;
+  }
+}
+
+.reactionButton1 .fa-heart {
+  color: #eb4141;
+}
+.feedImage {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.feedReactionButton {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4px;
+}
+.reactionButton1 button {
+  padding-top: 0;
+  border: 0;
+  outline: 0;
+  background-color: white;
+  font-size: 25px;
+}
+.reactionButton2 button {
+  padding: 7px;
+  padding-top: 0;
+  border: 0;
+  outline: 0;
+  background-color: white;
+  font-size: 25px;
+}
+.reactionButton1 {
+  font-size: 25px;
+}
+.reactionButton2 {
+  padding-top: 4px;
+}
+.fa-boookmark {
+  font-size: 20px;
+}
+.ReactionImage img {
+  margin-bottom: -6px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.ReactionImage span {
+  margin-top: 10px;
+  margin-left: 1px;
+  border: 0;
+  font: caption;
+}
+.reactionSentence {
+  display: flex;
+  position: relative;
+}
+.surfSentence span {
+  margin-left: 36px;
+  padding-left: 0px;
+  border: 0;
+  font: caption;
+}
+.moreView a {
+  color: gray;
+  text-decoration: none;
+}
+.surfSentence1 span {
+  margin-left: 36px;
+  padding-left: 0px;
+  border: 0;
+  font: caption;
+}
+.surfSentence2 {
+  margin-top: -11px;
+  padding: 12px;
+  color: gray;
+  p {
+    margin: 2px;
+    padding: 20px;
+    padding-top: 1px;
+  }
+}
+.surfSentence2 {
+  border-bottom: solid #e6e6e6;
+}
+.feedCommentContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #e6e6e6;
+  button {
+    left: 10px;
+    border: 0;
+    background-color: white;
+    color: #c5e1fa;
+  }
+}
+.feedComment {
+  padding: 20px;
+  padding-right: 120px;
+  padding-left: 12px;
+  background-color: white;
+
+  text-align: left;
+}
+.buttonHeart {
+  display: flex;
+  justify-content: center;
+  width: 122%;
+  height: 24px;
+  margin-left: 222px;
+  border: none;
+  background: transparent;
+}
+.asideHead {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  img {
+    display: flex;
+    border-radius: 50%;
+  }
+}
+.asideHeadText {
+  margin-top: 13px;
+  padding-left: 10px;
+  p {
+    margin: 0;
+    padding: 5px;
+    line-height: 6px;
+  }
+}
+.asideBody {
+  max-height: 150px;
+  margin-top: 12px;
+  overflow-x: hidden;
+  border: solid;
+  border-color: #e6e6e6;
+}
+.asideBodyStory {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  span {
+    margin: 5px;
+    padding: 0px;
+    border: none;
+    color: gray;
+    font-size: 13px;
+  }
+  p {
+    margin: 7px;
+  }
+}
+.asidehi {
+  display: flex;
+  position: relative;
+  justify-content: left;
+  img {
+    margin-bottom: 2px;
+    margin-left: 7px;
+    border-radius: 50%;
+    background-color: radial-gradient(
+        circle farthest-corner at 32% 106%,
+        #ffe17d 0%,
+        #ffcd69 10%,
+        #fa9137 28%,
+        #eb4141 42%,
+        transparent 82%
+      ),
+      linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+  }
+  span {
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    font: caption;
+  }
+  p {
+    margin-top: -1px;
+    margin-left: 6px;
+    color: gray;
+    font-size: 14px;
+  }
+  button {
+    position: absolute;
+    right: 0;
+
+    border: none;
+    background-color: white;
+    color: #3e99ed;
+  }
+  p {
+    color: gray;
+  }
+}
+.asideTails {
+  margin-top: 13px;
+  border: solid #e6e6e6;
+}
+.asideTailsRecommend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  span {
+    margin-left: -15px;
+    padding-top: 8px;
+    border: none;
+    color: gray;
+    font-size: 13px;
+  }
+  p {
+    margin-top: 9px;
+    margin-right: 9px;
+  }
+}
+aside {
+  width: 259px;
+}
+.side-childs img {
+  border-radius: 50%;
+}
+.side-childs p {
+}
+.side-pick {
+}
+.side-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 17px;
+}
+.asideDown {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  color: gray;
+  li {
+    display: inline-block;
+    position: relative;
+    & + li {
+      margin-left: 3px;
+      padding-left: 3px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 43%;
+        left: -1.5px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: rgb(191, 188, 188);
+      }
+    }
+  }
+}
+a {
+  color: rgb(195, 191, 191);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.pInput {
+  color: rgb(194, 189, 189);
+}
