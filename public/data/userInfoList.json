@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "user": "jeonghwan",
+    "userImg": "/images/cheonjeonghwan/IMG:h11.jpeg",
+    "feedImg": "/images/cheonjeonghwan/IMG:h12:2970.jpg"
+  },
+  {
+    "id": 2,
+    "user": "Jo EunHae",
+    "userImg": "/images/cheonjeonghwan/eunhae.png",
+    "feedImg": "/images/cheonjeonghwan/IMG_feed2.jpg"
+  },
+  {
+    "id": 3,
+    "user": "Gang jimin",
+    "userImg": "/images/cheonjeonghwan/gangji.png",
+    "feedImg": "/images/cheonjeonghwan/IMG_feed3.jpg"
+  },
+
+  {
+    "id": 4,
+    "user": "Gwak jongbum",
+    "userImg": "/images/cheonjeonghwan/gwak.png",
+    "feedImg": "/images/cheonjeonghwan/IMG_feed1.jpg"
+  },
+  {
+    "id": 5,
+    "user": "Yun sumin",
+    "userImg": "/images/cheonjeonghwan/feed5.png",
+    "feedImg": "/images/cheonjeonghwan/IMG_2978.jpg"
+  },
+  {
+    "id": 6,
+    "user": "Park moon",
+    "userImg": "/images/cheonjeonghwan/feed6.png",
+    "feedImg": "/images/cheonjeonghwan/IMG_2435.jpg"
+  }
+]
