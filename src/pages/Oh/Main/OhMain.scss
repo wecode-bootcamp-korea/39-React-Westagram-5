@@ -52,6 +52,7 @@
       z-index: 1;
       width: 175px;
       height: 23px;
+      padding: 10px;
       border-radius: 3px;
       opacity: 1;
       background-color: #fafafa;
@@ -248,6 +249,15 @@
         cursor: pointer;
       }
 
+      .postOn {
+        margin-right: 10px;
+        border: none;
+        background: none;
+        color: #0095f6;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
       .time {
         margin-top: 6px;
         margin-left: 20px;
@@ -257,6 +267,11 @@
 
       .comments__list {
         width: 100%;
+      }
+
+      .commentHeart {
+        width: 10px;
+        height: 10px;
       }
     }
 

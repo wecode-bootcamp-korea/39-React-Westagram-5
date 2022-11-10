@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "userName": "juuh.yung",
+    "userImg": "/images/ohjuhyung/snowman.jpeg",
+    "userPhoto": "/images/ohjuhyung/snowman.jpeg",
+    "userLike": 100,
+    "userComment": "눈사람",
+    "moreComments": 50
+  },
+  {
+    "id": 2,
+    "userName": "juuh.yung",
+    "userImg": "/images/ohjuhyung/snowman.jpeg",
+    "userPhoto": "/images/ohjuhyung/snowman.jpeg",
+    "userLike": 100,
+    "userComment": "눈사람",
+    "moreComments": 50
+  },
+
+  {
+    "id": 3,
+    "userName": "juuh.yung",
+    "userImg": "/images/ohjuhyung/snowman.jpeg",
+    "userPhoto": "/images/ohjuhyung/snowman.jpeg",
+    "userLike": 100,
+    "userComment": "눈사람",
+    "moreComments": 50
+  }
+]

@@ -1,6 +1,6 @@
 import './OhLogin.scss';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Login() {
   const [inputId, setInputId] = useState('');
@@ -17,9 +17,20 @@ function Login() {
 
   const handleActive = inputId.includes('@') !== -1 && inputPw.length >= 5;
 
+  const fetchFn = () => {
+    fetch('api주소', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({ userId: inputId, userPassword: inputPw }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => console.log(data));
+  };
+
   const navigateMain = () => {
     navigate('/ohMain');
   };
+
   return (
     <div className="outline-box">
       <div className="instagram-logo">westagram</div>
@@ -43,7 +54,7 @@ function Login() {
           <button
             disabled={!handleActive}
             className={handleActive ? 'loginBtnOn' : 'loginBtn'}
-            onClick={navigateMain}
+            onClick={fetchFn}
             type="submit"
           >
             로그인

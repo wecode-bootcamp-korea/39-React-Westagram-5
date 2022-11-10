@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './OhMain.scss';
+import { INFO_LIST } from './infoList';
+import Feed from './Feed';
 
 function Main() {
-  const [comments, setComments] = useState();
+  const [feedList, setFeedList] = useState([]);
 
-  const onSubmit = () => {
-    console.log('submit');
-  };
-
+  useEffect(() => {
+    fetch('/data/feed.json', { method: 'GET' })
+      .then(response => response.json())
+      .then(data => {
+        setFeedList(data);
+      });
+  }, []);
+  console.log(feedList);
   return (
     <div className="container">
       <div className="nav_container">
@@ -39,67 +45,9 @@ function Main() {
 
       <section className="main_section">
         <div className="section_1">
-          <div className="user">
-            <img
-              className="user__id__img"
-              src="/images/ohjuhyung/snowman.jpeg"
-            />
-            <p className="user__id">juuh.yung</p>
-          </div>
-          <img
-            className="cat__img"
-            alt="cat"
-            src="/images/ohjuhyung/cat.jpeg"
-          />
-
-          <div className="bottombox">
-            <div className="bottombox__icons">
-              <div className="bottombox__icons__left">
-                <i className="far fa-heart fa-lg" />
-                <i className="far fa-comment fa-lg" />
-                <i className="fa-regular fa-share-from-square fa-lg" />
-              </div>
-              <div className="bottombox__icons__right">
-                <i className="far fa-bookmark fa-lg" />
-              </div>
-            </div>
-            <div className="bottombox__likes">
-              <div className="bottombox__likes__first">
-                <img
-                  className="meerrock__img"
-                  src="/images/ohjuhyung/meerrock.jpeg"
-                />
-                <p className="bottombox__likes__second">Liked by</p>
-                <p className="bottombox__likes__id">meerrock</p>
-                <p className="bottombox__likes__thrid">and</p>
-                <p className="bottombox__likes__fourth">300 others</p>
-              </div>
-              <div className="contents">
-                <div className="contents__id">juuh.yung</div>
-                <div className="contents__content">고냥이</div>
-              </div>
-              <div className="comments">
-                <div className="comments__id">meerrock</div>
-                <div className="comments__content">망고스티이이인~ 나줘!</div>
-              </div>
-              <div className="time">1 HOUR AGO</div>
-              <ul className="comments__list" />
-
-              <div className="write">
-                <div className="inner">
-                  <i className="fa-regular fa-face-smile" />
-
-                  <form onsubmit="return false" className="comment__form">
-                    <input
-                      className="write__input"
-                      placeholder="Add a comment..."
-                    />
-                    <button className="post">post</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+          {feedList.map(feed => (
+            <Feed key={feed.id} feed={feed} />
+          ))}
         </div>
         <div className="section_2">
           <div className="my__id__box">
@@ -115,7 +63,7 @@ function Main() {
             <div className="story_profile">
               <div className="story1__box">
                 <div className="story1__border">
-                  <img className="story1" src=" /images/ohjuhyung/puppy.jpeg" />
+                  <img className="story1" src="/images/ohjuhyung/puppy.jpeg" />
                 </div>
                 <div className="story1__border__info">
                   <p className="story1__border__id">niceflim</p>
@@ -125,7 +73,7 @@ function Main() {
 
               <div className="story2__box">
                 <div className="story2__border">
-                  <img className="story2" src=" /images/ohjuhyung/puppy.jpeg" />
+                  <img className="story2" src="/images/ohjuhyung/puppy.jpeg" />
                 </div>
                 <div className="story2__border__info">
                   <p className="story2__border__id">niceflim</p>
@@ -135,9 +83,9 @@ function Main() {
 
               <div className="story3__box">
                 <div className="story3__border">
-                  <img className="story3" src=" /images/ohjuhyung/puppy.jpeg" />
+                  <img className="story3" src="/images/ohjuhyung/puppy.jpeg" />
                 </div>
-                <div className="" story3__border__info>
+                <div className="story3__border__info">
                   <p className="story3__border__id">niceflim</p>
                   <p className="story3__time">16분 전</p>
                 </div>
@@ -203,8 +151,13 @@ function Main() {
             </div>
           </div>
 
-          <p className="info">About·Help·Press·API·Jobs·Privacy·Terms·</p>
-          <p className="info2">Location·Language</p>
+          <ul className="info">
+            {INFO_LIST.map(infolist => (
+              <li key={infolist.id}>
+                <a href={infolist.link}>{infolist.text}</a>
+              </li>
+            ))}
+          </ul>
 
           <p className="copyright">ⓒ 2022 INSTAGRAM FROM META</p>
         </div>
