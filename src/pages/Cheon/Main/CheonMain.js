@@ -3,9 +3,8 @@ import '../Main/CheonMain.scss';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Feed from './Feed';
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<Main />);
 import React from 'react';
+
 function CheonMain() {
   const [feedList, setFeedList] = useState([]);
   useEffect(() => {
@@ -138,7 +137,7 @@ function CheonMain() {
                   <span>cheonjeong</span>
                   <p>wecode39기님 외 7명이...</p>
                 </div>
-                <button type="button">팔로우</button>
+                <button type="button">팔로우 </button>
               </div>
               <div className="asidehi">
                 <img
@@ -172,7 +171,6 @@ function CheonMain() {
   );
 }
 export default CheonMain;
-
 const FOOTER_INFO_LIST = [
   { id: 1, link: 'https://about.meta.com/', text: 'Meta' },
   { id: 2, link: 'https://about.instagram.com/', text: '소개' },

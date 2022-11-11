@@ -2,10 +2,23 @@ import React, { useState } from 'react';
 import './CheonLogin.scss';
 import { useNavigate } from 'react-router-dom';
 
-const CheonLogin = () => {
+function CheonLogin() {
+  const btnCheck = () => {
+    fetch('http://10.58.52.237:3000/auth/signin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({
+        email: emailInput,
+        password: pwInput,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => console.log(data));
+  };
+
   const [emailInput, setEmailIdInput] = useState('');
   const [pwInput, setPwInput] = useState('');
-  const [disabled, setdisabled] = useState(true);
+  const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
 
   const handleIdInput = event => {
@@ -16,8 +29,8 @@ const CheonLogin = () => {
   };
   const btnActive = () => {
     emailInput.includes('@') && pwInput.length > 5
-      ? setdisabled(false)
-      : setdisabled(true);
+      ? setDisabled(false)
+      : setDisabled(true);
   };
   const goToMain = () => {
     navigate('/cheon-main');
@@ -49,12 +62,12 @@ const CheonLogin = () => {
           value="로그인"
           className="push-btn"
           disabled={disabled}
-          onClick={goToMain}
+          onClick={btnCheck}
         />
         <p>비밀번호를 잊으셨나요?</p>
       </div>
     </div>
   );
-};
+}
 
 export default CheonLogin;

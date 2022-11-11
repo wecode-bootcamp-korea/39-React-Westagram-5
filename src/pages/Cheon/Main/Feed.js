@@ -1,6 +1,21 @@
+import React, { useState } from 'react';
+
 const Feed = props => {
   const { feed } = props;
-  console.log(feed);
+  const [commentInput, setCommnentInput] = useState('');
+  const [commentList, setCommentList] = useState([]);
+  const active = commentInput.length > 0;
+
+  const saveCommentInput = event => {
+    setCommnentInput(event.target.value);
+  };
+
+  const handleClickBtn = () => {
+    const pushedCommnents = [...commentList, commentInput];
+    setCommentList(pushedCommnents);
+    setCommnentInput('');
+  };
+
   return (
     <div>
       <div className="feedHeader">
@@ -40,6 +55,7 @@ const Feed = props => {
           />
           <span>wecode님 외 100명이 좋아합니다.</span>
         </div>
+
         <div className="reactionSentence">
           <div className="surfSentence">
             <span>wecode39기 할로윈데이~~ 형진님 너무 멋...</span>
@@ -50,10 +66,20 @@ const Feed = props => {
         </div>
         <div className="surfSentence1">
           <span>wecode40기 위워크에서 할로윈데이 너무 부러워요.😎</span>
-          <button className="buttonHeart">
-            <i className="far fa-heart" />
-          </button>
         </div>
+        {commentList.map((comment, index) => {
+          return (
+            <div className="surfSentence1" key={index}>
+              <span className="nickname">CheonJeong</span>
+              <span className="material-symbols-outlined icon gray comment-heart">
+                {comment}
+              </span>
+              <button className="buttonHeart">
+                <i className="far fa-heart" />
+              </button>
+            </div>
+          );
+        })}
         <div className="surfSentence2">
           <p>45분전</p>
         </div>
@@ -62,8 +88,16 @@ const Feed = props => {
             className="feedComment"
             type="text"
             placeholder="댓글 달기..."
+            value={commentInput}
+            onChange={saveCommentInput}
           />
-          <button>게시</button>
+          <button
+            className='"comment-btn'
+            disabled={!active}
+            onClick={handleClickBtn}
+          >
+            게시
+          </button>
         </div>
       </div>
     </div>
