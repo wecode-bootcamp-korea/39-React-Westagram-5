@@ -6,20 +6,20 @@ const Feed = ({ feed }) => {
   const [addComments, setAddComments] = useState([]);
   const btnActive = comments.length > 0;
 
-  const buttonClick = () => {
-    setAddComments([...addComments, comments]);
-    setComments('');
-  };
-
   const inputValue = event => {
     setComments(event.target.value);
+  };
+
+  const buttonClick = () => {
+    setAddComments([...addComments, comments]); // 새로운 배열로 교체
+    setComments('');
   };
 
   const removeComments = event => {
     const filtered = addComments.filter(
       (el, i) => i !== Number(event.target.id)
     );
-    //우리가 클릭한 것의 아이디를 가지고 있는 배열을 제외한 배열을 구성 후 그것을 SET함수의 인자로 넣으면 되겠지?
+    //우리가 클릭한 것의 아이디를 가지고 있는 배열을 제외한 배열을 구성 후 그것을 SET함수의 인자로 넣으면 됨
     setAddComments(filtered);
   };
 

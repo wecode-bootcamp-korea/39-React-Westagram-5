@@ -15,7 +15,7 @@ function Login() {
     setInputPw(e.target.value);
   };
 
-  const handleActive = inputId.includes('@') !== -1 && inputPw.length >= 5;
+  const handleActive = inputId.indexOf('@') !== -1 && inputPw.length >= 5;
 
   const fetchFn = () => {
     fetch('http://10.58.52.230:3008/auth/signin', {

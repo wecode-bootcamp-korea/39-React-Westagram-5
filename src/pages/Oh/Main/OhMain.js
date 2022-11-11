@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './OhMain.scss';
+import './Feed.scss';
+import './Comments.scss';
 import { INFO_LIST } from './infoList';
 import Feed from './Feed';
 
