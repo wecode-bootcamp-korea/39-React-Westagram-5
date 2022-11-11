@@ -1,3 +1,5 @@
 // 모든 페이지에서 공통적으로 적용돼야 될 스타일들을 넣어 놓는 파일
 // 예를 들면 box-sizing같은 경우
-*{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
